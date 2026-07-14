@@ -1,0 +1,37 @@
+{
+  "variantName": "cards-teaser",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-07-14T14:45:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://privacy.abbvie/",
+    "originPage": "AbbVie Privacy Center home page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "feature",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + heading + description + CTA",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "3-up teaser/navigation grids linking to sub-topics",
+      "feature or category cards with image + heading + description + Learn More link"
+    ],
+    "notSuitableFor": [
+      "cards without images (use a no-images variant)",
+      "single highlighted item rather than a grid"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-07-14T14:45:00.000Z"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://privacy.abbvie/",
+  "path": "index",
+  "timestamp": "2026-07-14T14:59:02.349Z",
+  "title": "Home | AbbVie",
+  "template": "privacy-home",
+  "blocks": [
+    "hero-banner",
+    "cards-teaser"
+  ]
+}

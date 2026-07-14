@@ -1,0 +1,37 @@
+{
+  "variantName": "hero-banner",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-07-14T14:45:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://privacy.abbvie/",
+    "originPage": "AbbVie Privacy Center home page",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "hero",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "background image + heading + subheading",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "landing/home pages with a full-bleed photographic banner",
+      "category hero headers with overlaid white text"
+    ],
+    "notSuitableFor": [
+      "text-only intros without a background image",
+      "sections requiring multiple content blocks below the banner"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-07-14T14:45:00.000Z"
+  }
+}

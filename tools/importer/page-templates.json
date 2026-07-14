@@ -1,0 +1,32 @@
+{
+  "metadata": {
+    "projectType": "xwalk"
+  },
+  "templates": [
+    {
+      "name": "privacy-home",
+      "urls": [
+        "https://privacy.abbvie/"
+      ],
+      "representativeUrl": "https://privacy.abbvie/",
+      "coverageGaps": [],
+      "description": "AbbVie Privacy Center homepage: category hero teaser, intro paragraph, and a three-up card grid linking to privacy sub-topics.",
+      "blocks": [
+        {
+          "name": "hero-banner",
+          "instances": [
+            "#maincontent > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.cmp-container > div.teaser.cmp-teaser--categoryhero",
+            ".teaser.cmp-teaser--categoryhero"
+          ]
+        },
+        {
+          "name": "cards-teaser",
+          "instances": [
+            "#maincontent > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.cmp-container > div.row.container.responsivegrid.cmp-row--wider-width",
+            ".row.container.responsivegrid.cmp-row--wider-width"
+          ]
+        }
+      ]
+    }
+  ]
+}
