@@ -1,0 +1,22 @@
+{
+  "status": "success",
+  "url": "https://www.allianz.com/en.html",
+  "path": "en",
+  "timestamp": "2026-07-23T18:10:56.014Z",
+  "title": "Insurance and Asset Management worldwide | Allianz",
+  "template": "homepage",
+  "blocks": [
+    "hero-banner",
+    "carousel-news",
+    "columns-feature",
+    "columns-feature",
+    "columns-feature",
+    "columns-feature",
+    "embed-widget",
+    "embed-widget",
+    "cards-teaser",
+    "cards-teaser",
+    "cards-teaser",
+    "cards-teaser"
+  ]
+}

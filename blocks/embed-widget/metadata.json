@@ -1,0 +1,42 @@
+{
+  "variantName": "embed-widget",
+  "baseBlock": "embed",
+  "version": "1.0.0",
+  "created": "2026-07-23T16:45:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.allianz.com/en.html",
+    "originPage": "Allianz Group corporate homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "widget",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "single external URL rendered as an embedded iframe/widget",
+    "buttonCount": 0,
+    "imageCount": 0,
+    "usedFor": [
+      "share-price chart widget (charts3.equitystory.com)",
+      "Flockler social media feed wall"
+    ]
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "embedding external interactive widgets by URL (financial charts, dashboards)",
+      "embedding third-party social media feeds/walls",
+      "embedding external video/media referenced by URL"
+    ],
+    "notSuitableFor": [
+      "purely text or image content that needs no external embed",
+      "content requiring bespoke in-page styling of the third-party media"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/en"],
+    "reuseCount": 1,
+    "lastUsed": "2026-07-23T16:45:00.000Z"
+  }
+}

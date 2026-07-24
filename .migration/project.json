@@ -2,13 +2,14 @@
   "type": "xwalk",
   "sites": {
     "xw-july-14": {
+      "libraryUrl": "https://main--sta-xwalk-boilerplate--aemysites.aem.page/tools/sidekick/library.json",
       "previewOrg": "blefebvre",
       "previewSite": "xw-july-14",
       "aemSitePath": "/content/xw-july-14",
       "aemAssetsFolderPath": "/content/dam/xw-july-14",
       "aemSiteName": "xw-july-14",
-      "aemSiteTitle": "blefebvr-xw-july-14",
-      "libraryUrl": "https://main--sta-xwalk-boilerplate--aemysites.aem.page/tools/sidekick/library.json"
+      "aemSiteTitle": "blefebvr-xw-july-14"
     }
-  }
+  },
+  "botProtected": true
 }

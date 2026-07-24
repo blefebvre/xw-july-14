@@ -4,27 +4,53 @@
   },
   "templates": [
     {
-      "name": "privacy-home",
+      "name": "homepage",
       "urls": [
-        "https://privacy.abbvie/"
+        "https://www.allianz.com/en.html"
       ],
-      "representativeUrl": "https://privacy.abbvie/",
+      "representativeUrl": "https://www.allianz.com/en.html",
       "coverageGaps": [],
-      "description": "AbbVie Privacy Center homepage: category hero teaser, intro paragraph, and a three-up card grid linking to privacy sub-topics.",
+      "description": "Allianz Group corporate homepage: hero stage with promotional banner, a news carousel (3-up), investor relations / media center feature blocks with share-price widget, an 'Insights & Specials' multi-column feature grid, an 'Allianz at a glance' stats section, a careers teaser, a social media feed section, and a market-finder CTA.",
       "blocks": [
         {
           "name": "hero-banner",
           "instances": [
-            "#maincontent > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.cmp-container > div.teaser.cmp-teaser--categoryhero",
-            ".teaser.cmp-teaser--categoryhero"
+            "#onemarketing-main-wrapper > div.stage.container.aem-GridColumn.aem-GridColumn--default--12 > div.c-stage"
+          ]
+        },
+        {
+          "name": "carousel-news",
+          "instances": [
+            "#onemarketing-main-wrapper > div.parsys.aem-GridColumn.aem-GridColumn--default--12 > div.carousel.container"
+          ]
+        },
+        {
+          "name": "columns-feature",
+          "instances": [
+            "#onemarketing-main-wrapper > div.parsys.aem-GridColumn.aem-GridColumn--default--12 > div.wrapper.container:nth-of-type(2) div.c-wrapper > div.multi-column-grid:nth-of-type(2)",
+            "#onemarketing-main-wrapper > div.parsys.aem-GridColumn.aem-GridColumn--default--12 > div.wrapper.container:nth-of-type(4) div.c-wrapper > div.multi-column-grid",
+            "#onemarketing-main-wrapper > div.parsys.aem-GridColumn.aem-GridColumn--default--12 > div.wrapper.container:nth-of-type(5) div.c-wrapper > div.multi-column-grid"
+          ]
+        },
+        {
+          "name": "embed-widget",
+          "instances": [
+            "#onemarketing-main-wrapper > div.parsys.aem-GridColumn.aem-GridColumn--default--12 > div.wrapper.container:nth-of-type(2) iframe.c-iframe",
+            "#onemarketing-main-wrapper > div.parsys.aem-GridColumn.aem-GridColumn--default--12 > div.wrapper.container:nth-of-type(6) div.flockler-integration"
           ]
         },
         {
           "name": "cards-teaser",
           "instances": [
-            "#maincontent > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.container.responsivegrid.aem-GridColumn.aem-GridColumn--default--12 > div.cmp-container > div.row.container.responsivegrid.cmp-row--wider-width",
-            ".row.container.responsivegrid.cmp-row--wider-width"
+            "#onemarketing-main-wrapper > div.parsys.aem-GridColumn.aem-GridColumn--default--12 > div.wrapper.container:nth-of-type(3) div.c-wrapper > div.wrapper.container"
           ]
+        },
+        {
+          "name": "section-dark",
+          "instances": [
+            "#onemarketing-main-wrapper > div.parsys.aem-GridColumn.aem-GridColumn--default--12 > div.wrapper.container:last-of-type"
+          ],
+          "section": "dark"
         }
       ]
     }

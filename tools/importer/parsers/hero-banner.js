@@ -2,45 +2,42 @@
 /* global WebImporter */
 /**
  * Parser for hero-banner. Base block: hero.
- * Source: https://privacy.abbvie/ (AbbVie Privacy Center homepage — category hero teaser)
- * Generated: 2026-07-14
- * Validated against source.html and live homepage selectors.
+ * Variant: hero-banner (xwalk project).
+ * Source: https://www.allianz.com/en.html (Allianz Group homepage — hero stage).
+ * Generated: 2026-07-23
+ * Validated against migration-work/block-context/hero-banner/source.html and the
+ * Bright Data snapshot (tools/importer/bd-snapshots/en.html.html). Selector matches 1 element.
  *
- * Library structure (hero): 1 column, up to 3 rows.
+ * Library structure (Hero): 1 column, up to 3 rows.
  *   Row 1: block name.
  *   Row 2: background image (optional)      -> UE model field: image (imageAlt collapsed into img alt attr)
  *   Row 3: title + subheading + CTA (rich)  -> UE model field: text
  *
- * xwalk field hints: <!-- field:image --> before the background image cell,
- * <!-- field:text --> before the content cell. imageAlt is a collapsed field
- * (becomes the img alt attribute), so it gets no hint of its own.
+ * xwalk field hints (per hinting.md): <!-- field:image --> before the background
+ * image cell; <!-- field:text --> before the content cell. imageAlt is a collapsed
+ * field (rendered as the img alt attribute), so it gets no hint of its own.
  */
 export default function parse(element, { document }) {
-  // --- INPUT EXTRACTION (validated against source.html) ---
-  // Background image lives in .cmp-teaser__image; the <img> carries the DM data-asset.
-  const bgImage = element.querySelector('.cmp-teaser__image img, .cmp-image__image, img');
-
-  // Ensure the image has an alt so the collapsed imageAlt field is populated.
-  if (bgImage && !bgImage.getAttribute('alt')) {
-    const imgTitle = element.querySelector('.cmp-teaser__image-title span[title]');
-    if (imgTitle) bgImage.setAttribute('alt', imgTitle.getAttribute('title') || '');
-  }
-
-  // Title styled as a heading. Prefer the content title; the image-title (.cmp-teaser__image-title)
-  // is a decorative wrapper with no visible text, so it must not be selected.
-  const heading = element.querySelector('.cmp-teaser__title')
-    || element.querySelector('.cmp-teaser__content h1, .cmp-teaser__content h2, .cmp-teaser__content h3')
-    || element.querySelector('h1, h2');
-
-  // Subheading / description (richtext paragraphs).
-  const description = element.querySelector(
-    '.cmp-teaser__description-text, .cmp-teaser__description'
+  // --- INPUT EXTRACTION (validated against Allianz source.html) ---
+  // Full-bleed background photo. Allianz markup: <picture class="c-stage__image"> containing
+  // <img class="c-image__img abovethefoldimage">. Prefer the stage image, then any block image.
+  const bgImage = element.querySelector(
+    '.c-stage__image img, .c-image__img, picture img, img',
   );
 
-  // Optional CTA(s).
+  // Headline. Allianz markup: <h1 class="c-heading"> inside .headline. Fall back to any heading.
+  const heading = element.querySelector(
+    '.headline h1, .headline h2, .c-stage__content h1, .c-stage__content h2, h1, h2',
+  );
+
+  // Optional subheading / description paragraph(s).
+  const description = element.querySelector('.c-stage__content .c-copy, .c-copy');
+
+  // Optional CTA(s). Allianz markup: <a class="c-button ..."> inside .button.
+  // Use distinct, mutually-exclusive selectors so an <a> is never double-selected.
   const ctaLinks = Array.from(
-    element.querySelectorAll('.cmp-teaser__action-container-wrapper a, .cmp-teaser__action a')
-  );
+    element.querySelectorAll('.button a.c-button, a.c-button'),
+  ).filter((a, i, arr) => arr.indexOf(a) === i);
 
   // Empty-block guard.
   if (!heading && !description && !bgImage) {
@@ -64,7 +61,7 @@ export default function parse(element, { document }) {
   if (heading) contentCell.appendChild(heading);
   if (description) contentCell.appendChild(description);
   ctaLinks.forEach((cta) => contentCell.appendChild(cta));
-  cells.push([contentCell]);
+  cells.push([contentCell]); // 1-column hero: one row, one cell holding all content.
 
   const block = WebImporter.Blocks.createBlock(document, { name: 'hero-banner', cells });
   element.replaceWith(block);

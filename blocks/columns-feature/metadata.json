@@ -1,0 +1,43 @@
+{
+  "variantName": "columns-feature",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-07-23T16:45:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.allianz.com/en.html",
+    "originPage": "Allianz Group corporate homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "feature",
+    "imagePattern": "mixed"
+  },
+  "contentPattern": {
+    "structure": "side-by-side columns (image | text, or text | text panels, or a row of stat tiles)",
+    "buttonCount": 1,
+    "imageCount": 1,
+    "usedFor": [
+      "Investor Relations + Results 2Q promo panels (text | highlighted text)",
+      "Allianz at a glance 4-up statistic tiles (number + caption)",
+      "Careers image + text/list/CTA"
+    ]
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "side-by-side text/image panels for comparisons or feature callouts",
+      "balanced multi-column rows such as stat/facts bands (number + caption)",
+      "image-left/text-right or text-left/image-right feature layouts"
+    ],
+    "notSuitableFor": [
+      "uniform repeating cards with images (use cards / cards-teaser)",
+      "single-column stacked content that reads better vertically"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/en"],
+    "reuseCount": 1,
+    "lastUsed": "2026-07-23T16:45:00.000Z"
+  }
+}
